@@ -24,11 +24,15 @@ namespace HideAndSeek
                 if (myLocation is IHasExteriorDoor)
                 {
                     IHasExteriorDoor locationWithDoor = myLocation as IHasExteriorDoor;
-                    if (random.Next(2) == 1)
+                    if (random.Next(2) == 1 || myLocation.Exits.Length == 0)
                         myLocation = locationWithDoor.DoorLocation;
                 }
-                int rand = random.Next(myLocation.Exits.Length);
-                myLocation = myLocation.Exits[rand];
+                if (myLocation.Exits.Length > 0)
+                {
+                    int rand = random.Next(myLocation.Exits.Length);
+                    myLocation = myLocation.Exits[rand];
+                }
+
                 if (myLocation is IHidingPlace)
                     hidden = true;
             }

@@ -17,13 +17,17 @@ namespace HideAndSeek
         public virtual string Description
         {
             get {
-                string description = "You're standing in the " + Name + ". You see exits to the following places: ";
-                for (int i = 0; i < Exits.Length; ++i)
+                string description = "You're standing in the " + Name;
+                if (Exits.Length > 0)
                 {
-                    description += Exits[i].Name;
-                    if (i != Exits.Length - 1)
-                        description += ", ";
-                }
+                    description += ". You see exits to the following places: ";
+                    for (int i = 0; i < Exits.Length; ++i)
+                    {
+                        description += Exits[i].Name;
+                        if (i != Exits.Length - 1)
+                            description += ", ";
+                    }
+                } 
                 description += ".";
                 return description;
             }

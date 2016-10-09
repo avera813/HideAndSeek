@@ -57,6 +57,7 @@
     <Compile Include="Location.cs" />
     <Compile Include="Opponent.cs" />
     <Compile Include="Outside.cs" />
+    <Compile Include="OutsideDoorWithHidingPlace.cs" />
     <Compile Include="OutsideWithDoor.cs" />
     <Compile Include="OutsideWithHidingPlace.cs" />
     <Compile Include="Program.cs" />
