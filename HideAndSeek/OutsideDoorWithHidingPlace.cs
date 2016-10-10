@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace HideAndSeek
 {
-    class OutsideDoorWithHidingPlace : OutsideWithDoor, IHidingPlace
+    class OutsideWithDoorHidingPlace : OutsideWithDoor, IHidingPlace
     {
         public string HidingPlaceName { get; private set; }
-        public OutsideDoorWithHidingPlace(string name, bool hot, string doorDescription, string hidingPlaceName) : base(name, hot, doorDescription)
+        public OutsideWithDoorHidingPlace(string name, bool hot, string doorDescription, string hidingPlaceName) : base(name, hot, doorDescription)
         {
             HidingPlaceName = hidingPlaceName;
         }
