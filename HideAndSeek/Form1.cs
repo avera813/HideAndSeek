@@ -19,7 +19,7 @@ namespace HideAndSeek
         RoomWithHidingPlace masterBedroom, secondBedroom, bathroom;
         OutsideWithDoor frontYard, backYard;
         OutsideWithHidingPlace garden, driveway;
-        OutsideWithDoorHidingPlace balcony;
+        OutsideWithDoorAndHidingPlace balcony;
         Opponent opponent;
 
         public Form1()
@@ -44,7 +44,7 @@ namespace HideAndSeek
             backYard = new OutsideWithDoor("Back Yard", true, "a screen door");
             garden = new OutsideWithHidingPlace ("Garden", false, "inside the shed");
             driveway = new OutsideWithHidingPlace("Driveway", true, "in the garage");
-            balcony = new OutsideWithDoorHidingPlace("Outside Balcony", false, "french doors", "under a tarp");
+            balcony = new OutsideWithDoorAndHidingPlace("Outside Balcony", false, "french doors", "under a tarp");
 
             // Declare exits
             livingRoom.Exits = new Location[] { diningRoom, stairs };
